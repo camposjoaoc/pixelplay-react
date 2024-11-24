@@ -11,7 +11,7 @@ function App() {
         />
         <GameCard
           cardTitle="Call of Duty®: Black Ops 6"
-          priceTag="899 sek"
+          priceTag="1099 sek"
           imgIndex={1}
         />
         <GameCard
@@ -28,6 +28,11 @@ function App() {
           cardTitle="Sniper Elite: Resistance"
           priceTag="499 sek"
           imgIndex={4}
+        />
+        <GameCard
+          cardTitle="Tom Clancy's Rainbow Six® Siege"
+          priceTag="699 sek"
+          imgIndex={5}
         />
       </div>
     </>
