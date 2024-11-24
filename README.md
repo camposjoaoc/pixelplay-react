@@ -53,5 +53,5 @@ This project is licensed under the **MIT License**.
 
 - 👤 **Author**: João Campos  
 - ✉️ **Email**: [joaocampos963@icloud.com](mailto:joaocampos963@icloud.com)
-- LinkedIn: [João Campos](https://www.linkedin.com/in/joaoccampos/)
+- 🔗 **LinkedIn**:  [João Campos](https://www.linkedin.com/in/joaoccampos/)
 
