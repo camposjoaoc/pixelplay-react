@@ -4,8 +4,9 @@ import GamePic2 from '../img/img-gamecard-2.jpeg';
 import GamePic3 from '../img/img-gamecard-3.jpeg';
 import GamePic4 from '../img/img-gamecard-4.jpeg';
 import GamePic5 from '../img/img-gamecard-5.jpeg';
+import GamePic6 from '../img/img-gamecard-6.jpeg';
 
-const gameImages = [GamePic1, GamePic2, GamePic3, GamePic4, GamePic5];
+const gameImages = [GamePic1, GamePic2, GamePic3, GamePic4, GamePic5, GamePic6];
 
 function GameCard(props) {
   // let cardTitle = "Generic";
