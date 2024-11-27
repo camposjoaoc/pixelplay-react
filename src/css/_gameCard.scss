@@ -124,3 +124,49 @@
     color: #555;
     /* Change link color on hover */
 }
+
+@media screen and (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+    }
+
+    .btn-buy {
+        padding: 20px;
+        font-size: 1.1rem;
+        width: auto;
+    }
+}
+
+/* Para smartphones e telas menores */
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        /* 1 column */
+        gap: 15px;
+        /* Optional: Reduce gap for smaller screens */
+        padding: 10px;
+        /* Optional: Reduce padding for smaller screens */
+    }
+
+    .card {
+        padding: 15px;
+        box-shadow: 3px 3px 5px rgb(200, 200, 200);
+    }
+
+    .img {
+        height: 150px;
+
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .btn-buy {
+
+        padding: 10px;
+        font-size: 0.9rem;
+        width: auto;
+    }
+}
