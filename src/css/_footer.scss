@@ -1,0 +1,60 @@
+$logo-font: "Roboto", sans-serif;
+$main-font: "Arial", sans-serif;
+$primary-color: #2277ff;
+$second-color: #fff;
+$tertiary-color: #000;
+$background-color: #000;
+$background-color-2: #fff;
+$text-color: #fff;
+$text-color-2: #000;
+
+/* Footer styles: dark background, white text, padding for spacing */
+footer {
+    background-color: $background-color-2;
+    font-family: $main-font;
+    font-size: 50px;
+    color: $text-color;
+    padding: 1em 0;
+}
+
+footer p {
+    font-size: 2.2rem; /* Aumenta o tamanho do texto */
+    color: #fff; /* Ajuste a cor, se necessário */
+    text-align: center; /* Centraliza o texto (opcional) */
+    margin: 10px 0; /* Ajusta o espaçamento em torno do texto */
+}
+
+/* Footer content: flex layout to center items vertically and horizontally */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text */
+}
+
+/* Copyright text: small margin for separation from icons */
+.footer-content p {
+    margin: 0.5em 0;
+}
+
+/* Social icons container: flex layout for alignment and spacing */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-top: 0.5em; /* Space above icons */
+}
+.social-icons a:hover {
+    color: antiquewhite; /* Hover color for footer links */
+}
+
+/* Icon links: white color, larger size, and smooth hover transition */
+.social-icons a {
+    color: $tertiary-color;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+/* Hover effect for icons: changes color to light gray */
+.social-icons a:hover {
+    color: $primary-color;
+}
