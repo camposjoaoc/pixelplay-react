@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'normalize.css';
 import AllGames from './pages/all-games';
 import About from './pages/about';
 import Navbar from './navbar';

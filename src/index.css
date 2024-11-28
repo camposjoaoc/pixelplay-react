@@ -1,9 +1,9 @@
 body {
-    margin: 20px 10vw;
+    margin: 20px 10vh;
     /* 20px top/bottom and 10% of viewport width on left/right */
     box-sizing: border-box;
     /* Ensure padding and borders are included in width */
-    max-width: 1200px;
+    width: 100%;
     /* Optional: Restrict maximum width for better readability */
     margin-left: auto;
     /* Center body content horizontally */

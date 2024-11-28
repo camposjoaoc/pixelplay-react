@@ -3,14 +3,19 @@
     /* Use grid layout */
     grid-template-columns: repeat(3, 1fr);
     /* 3 equal-width columns */
+    grid-template-rows: repeat(2, 55vh);
+    /* 3 equal-height rows */
     gap: 20px;
     /* Space between cards */
     padding: 20px;
     /* Optional padding around the grid */
-    width: 100%;
     /* Ensure the container spans full width */
     box-sizing: border-box;
     /* Include padding and borders in width/height */
+    margin: 20px auto; 
+    /* Center container with outer margin */
+    max-width: 80%; 
+    /* Set maximum width for responsive scaling */
 }
 
 .card {
@@ -26,6 +31,7 @@
     /* Center text */
     width: 100%;
     /* Make the card take the full width of the grid cell */
+
     box-sizing: border-box;
     /* Ensure padding doesn’t affect size */
     background-color: white;
@@ -34,6 +40,7 @@
 
 .img {
     height: auto;
+    max-height: 50%;
     border-radius: 2px;
     /* Slightly rounded corners */
     margin-bottom: 10px;
@@ -42,7 +49,7 @@
 
 .card-title,
 .price-tag {
-    font-family: 'Lucida Sans', sans-serif;
+    font-family: "Lucida Sans", sans-serif;
     /* Consistent font style */
     font-weight: 400;
     /* Regular font weight */
@@ -55,10 +62,13 @@
 }
 
 .card-title {
-    font-size: 2.05rem;
+    font-size: 1.5rem;
     /* Larger font for title */
     width: auto;
     /* Remove fixed width to allow flexible sizing */
+    height: 4.2rem;
+
+    overflow: hidden;
 }
 
 .price-tag {
@@ -73,7 +83,7 @@
     /* Fixed width */
     font-size: 1.25rem;
     /* Font size */
-    font-family: 'Lucida Sans', sans-serif;
+    font-family: "Lucida Sans", sans-serif;
     /* Font style */
     background-color: #ffffff;
     /* Initial background color */
@@ -156,7 +166,6 @@
 
     .img {
         height: 150px;
-
     }
 
     .card-title {
@@ -164,7 +173,6 @@
     }
 
     .btn-buy {
-
         padding: 10px;
         font-size: 0.9rem;
         width: auto;

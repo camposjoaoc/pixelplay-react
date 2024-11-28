@@ -4,7 +4,7 @@ $main-font: "Arial", sans-serif;
 $primary-color: #2277ff;
 $second-color: #fff;
 $background-color: #000;
-$background-color-2: #fff;
+$background-color-2: #c8c8c8;
 $text-color: #fff;
 $text-color-2: #000;
 
@@ -15,13 +15,9 @@ $text-color-2: #000;
     display: flex;
     justify-content: space-between; // Space between title and links
     align-items: center; // Vertically center items
-    margin: 20px auto;
     max-width: 100%;
     padding: 20px;
     background-color: $background-color-2;
-    border: 1px solid black; /* 1px width, solid style, black color */
-    border-radius: 5px;
-
 
     .navbar-title {
         font-family: $logo-font;
@@ -31,6 +27,7 @@ $text-color-2: #000;
         text-decoration: none;
         color: $primary-color;
         cursor: pointer;
+        margin: 0 50px 0 50px;
     }
 
     .nav-links-desktop {

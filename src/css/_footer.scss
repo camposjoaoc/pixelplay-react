@@ -4,25 +4,9 @@ $primary-color: #2277ff;
 $second-color: #fff;
 $tertiary-color: #000;
 $background-color: #000;
-$background-color-2: #fff;
+$background-color-2: #c8c8c8;
 $text-color: #fff;
 $text-color-2: #000;
-
-/* Footer styles: dark background, white text, padding for spacing */
-footer {
-    background-color: $background-color-2;
-    font-family: $main-font;
-    font-size: 50px;
-    color: $text-color;
-    padding: 1em 0;
-}
-
-footer p {
-    font-size: 2.2rem; /* Aumenta o tamanho do texto */
-    color: #fff; /* Ajuste a cor, se necessário */
-    text-align: center; /* Centraliza o texto (opcional) */
-    margin: 10px 0; /* Ajusta o espaçamento em torno do texto */
-}
 
 /* Footer content: flex layout to center items vertically and horizontally */
 .footer-content {
@@ -30,11 +14,19 @@ footer p {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     text-align: center; /* Center-align text */
+    background-color: $background-color-2;
+    font-family: $main-font;
+    color: $text-color;
+    padding: 1em 0;
 }
 
 /* Copyright text: small margin for separation from icons */
 .footer-content p {
     margin: 0.5em 0;
+    font-size: 1rem; /* Aumenta o tamanho do texto */
+    color: $tertiary-color; /* Ajuste a cor, se necessário */
+    text-align: center; /* Centraliza o texto (opcional) */
+    margin: 10px 0; /* Ajusta o espaçamento em torno do texto */
 }
 
 /* Social icons container: flex layout for alignment and spacing */
@@ -42,6 +34,7 @@ footer p {
     display: flex;
     gap: 15px; /* Space between icons */
     margin-top: 0.5em; /* Space above icons */
+    font-size: 1.5rem; /* Aumenta o tamanho do texto */
 }
 .social-icons a:hover {
     color: antiquewhite; /* Hover color for footer links */
@@ -50,7 +43,7 @@ footer p {
 /* Icon links: white color, larger size, and smooth hover transition */
 .social-icons a {
     color: $tertiary-color;
-    font-size: 1.5em;
+    font-size: 1em;
     transition: color 0.3s;
 }
 

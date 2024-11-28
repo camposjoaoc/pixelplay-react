@@ -4,8 +4,9 @@ import './css/_footer.scss'; // Importando os estilos SCSS
 
 function Footer(){
 return (
+
      <div className="footer-content">
-                <p>&copy; 2024 PIXELPlay Store ©.</p>
+                <p>&copy; 2024 PixelPlay Store ©</p>
                 <p>All rights reserved.</p>
                 <div className="social-icons">
                     <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
@@ -17,8 +18,7 @@ return (
                     <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
                             className="fa-brands fa-linkedin"></i></a>
                 </div>
-
-            </div>
+        </div>
     )
 }
 export default Footer;
