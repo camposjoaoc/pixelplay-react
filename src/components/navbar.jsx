@@ -1,51 +1,70 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './css/_navbar.scss'; // Importando os estilos SCSS
+import { Link, useNavigate } from 'react-router-dom';
+import '../css/_navbar.scss';
 
+// Navbar component
 function Navbar() {
-    // Estado para controlar a visibilidade do menu móvel
+
+    // State to track mobile menu visibility
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    // Função para alternar a visibilidade do menu móvel
+    // Toggles the mobile menu
     const toggleMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    // Função para fechar o menu móvel
+    // Closes the mobile menu
     const closeMenu = () => {
         setIsMobileMenuOpen(false);
     };
 
+    // Navigation hook for programmatic redirection
+    const navigate = useNavigate();
+
+    // Redirect to home
+    const goToHome = () => {
+        navigate('/');
+    };
+
     return (
         <nav className="navbar">
-            {/* Título ou Logo */}
-            <div className="navbar-title">PixelPlay Store</div>
 
-            {/* Links para Desktop */}
+            {/* Title redirects to home */}
+            <div className="navbar-title" onClick={goToHome}>PixelPlay Store</div>
+
+            {/* Desktop navigation links */}
             <ul className="nav-links-desktop">
                 <li><Link to="/all-games">All GAMES</Link></li>
+                <li><Link to="/miscellaneous">MISCELLANEOUS</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
+                <li>
+                    <Link to="/cart" className="cart-icon">
+                        <i className="fas fa-shopping-cart"></i>
+                    </Link>
+                </li>
             </ul>
 
-            {/* Menu Móvel */}
+            {/* Mobile menu */}
             <div className={`mobile-menu ${isMobileMenuOpen ? 'flex' : ''}`}>
-                {/* Botão para fechar o menu */}
+                {/* Close button for mobile menu */}
                 <button className="close" onClick={closeMenu}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>
-                {/* Links para Mobile */}
                 <ul className="nav-links-mobile">
+                    {/* Links close the menu after navigation */}
                     <li><Link to="/all-games" onClick={closeMenu}>All GAMES</Link></li>
+                    <li><Link to="/miscellaneous">MISCELLANEOUS</Link></li>
                     <li><Link to="/about" onClick={closeMenu}>ABOUT</Link></li>
+                    <li><Link to="/cart">CART</Link></li>
                 </ul>
             </div>
 
-            {/* Botão Hamburguer */}
+            {/* Hamburger button toggles mobile menu */}
             <button className="hamburger" onClick={toggleMenu}>
                 <i className="fa-solid fa-bars"></i>
             </button>
 
-            {/* Overlay para escurecer o fundo ao abrir o menu móvel */}
+            {/* Overlay closes the menu when clicked */}
             {isMobileMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
         </nav>
     );

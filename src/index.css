@@ -1,11 +1,19 @@
+/* Global styles for the body */
 body {
-    margin: 20px 10vw;
-    /* 20px top/bottom and 10% of viewport width on left/right */
+    /* Set the base font style */
+    font-family: "Roboto", sans-serif;
+
+    /* Apply consistent margin */
+    margin: 20px 10vh;
+    /* 20px top/bottom, 10% of viewport width left/right */
+
+    /* Include padding and border in width/height calculations */
     box-sizing: border-box;
-    /* Ensure padding and borders are included in width */
-    max-width: 1200px;
-    /* Optional: Restrict maximum width for better readability */
+
+    /* Set the full width of the body */
+    width: 100%;
+
+    /* Center the body content horizontally */
     margin-left: auto;
-    /* Center body content horizontally */
     margin-right: auto;
 }

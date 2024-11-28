@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 80%; /* Limits container width for better responsiveness */
+    justify-content: center; /* Centers content vertically */
+}
+
+.title-h1, .title-h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between elements */
+    font-size: 1.25rem;
+}
+
+.btn-style {
+    margin: 10px;
+    padding: 10px;
+    width: 10vw; /* Button size adapts to viewport width */
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #000;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Smooth button edges */
+    cursor: pointer;
+    transition: all 0.2s ease; /* Smooth hover effect */
+}
+
+.btn-style:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 5px #aaa; /* Adds shadow effect */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+.btn-style:active {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px #aaa; /* Reduces shadow to indicate click */
+    transform: translateY(1px);
+}
+
+.btn-style a {
+    color: #000;
+    text-decoration: none; /* Removes underline from links */
+}
+
+.btn-style a:hover {
+    color: #555; /* Darkens link color on hover */
+}
