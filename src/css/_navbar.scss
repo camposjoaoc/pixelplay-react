@@ -1,4 +1,4 @@
-// Style variables
+// Style variables for fonts, colors, and general styles
 $logo-font: "Roboto", sans-serif;
 $main-font: "Arial", sans-serif;
 $primary-color: #2277ff;
@@ -8,17 +8,18 @@ $background-color-2: #c8c8c8;
 $text-color: #fff;
 $text-color-2: #000;
 
-// Navbar styles
+// Navbar container: aligns logo and links, provides spacing and background
 .navbar {
     position: relative;
     color: $text-color-2;
     display: flex;
-    justify-content: space-between; // Space between title and links
-    align-items: center; // Vertically center items
+    justify-content: space-between;
+    align-items: center;
     max-width: 100%;
     padding: 20px;
     background-color: $background-color-2;
 
+    // Navbar logo/title: styled with custom font and colors, centered
     .navbar-title {
         font-family: $logo-font;
         font-size: 1.9rem;
@@ -30,18 +31,20 @@ $text-color-2: #000;
         margin: 0 50px 0 50px;
     }
 
+    // Desktop navigation links: aligned horizontally with spacing
     .nav-links-desktop {
         list-style: none;
         margin: 0;
         padding: 0;
-        display: flex; // Horizontal layout for links
+        display: flex;
 
+        // Individual link items with hover effects
         li {
             padding: 0 15px;
 
             a {
                 text-decoration: none;
-                transition: 0.3s; // Smooth hover effect
+                transition: 0.3s;
                 font-family: $main-font;
                 font-size: 16px;
                 line-height: 23px;
@@ -49,17 +52,24 @@ $text-color-2: #000;
                 color: $text-color-2;
 
                 &:hover {
-                    color: #2277ff; // Hover color
+                    color: $primary-color;
                 }
             }
         }
     }
 }
 
-// Mobile menu styles
+// Shopping cart icon: positioned for potential badge display
+.cart-icon {
+    position: relative;
+    font-size: 20px;
+    color: #333;
+}
+
+// Mobile menu: hidden by default, slides into view when active
 .mobile-menu {
     display: none;
-    position: fixed; // Fixed to cover the screen
+    position: fixed;
     top: 0;
     right: 0;
     width: 60%;
@@ -68,14 +78,16 @@ $text-color-2: #000;
     flex-direction: column;
     align-items: center;
     z-index: 5;
-    transform: translateX(100%); // Hidden off-screen
-    transition: transform 0.3s ease-in-out; // Smooth open/close transition
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
 
+    // Active mobile menu: displayed and positioned on-screen
     &.flex {
-        display: flex; // Show menu
-        transform: translateX(0); // Move on-screen
+        display: flex;
+        transform: translateX(0);
     }
 
+    // Close button: aligned to top-right of the menu
     .close {
         align-self: flex-end;
         margin: 20px;
@@ -86,15 +98,17 @@ $text-color-2: #000;
         color: $primary-color;
     }
 
+    // Mobile navigation links: displayed vertically with spacing
     .nav-links-mobile {
         display: flex;
-        flex-direction: column; // Vertical layout
+        flex-direction: column;
         text-align: center;
         gap: 1.2rem;
         list-style: none;
         padding: 0;
         width: 50%;
 
+        // Individual mobile link items with hover effects
         li {
             border-bottom: 1px solid #787272;
             padding-bottom: 1.2rem;
@@ -106,26 +120,26 @@ $text-color-2: #000;
                 color: $text-color;
 
                 &:hover {
-                    color: $primary-color; // Hover color
+                    color: $primary-color;
                 }
             }
         }
     }
 }
 
-// Hamburger button (mobile menu toggle)
+// Hamburger button for mobile menu toggle: displayed only on mobile
 .hamburger {
-    display: none; // Escondido por padrão (desktop)
+    display: none;
     font-size: 1.5rem;
     cursor: pointer;
     background: none;
     border: none;
-    color: #fff; // Ajuste conforme necessário
-    z-index: 10; // Sobreposição acima de outros elementos
-    position: relative; // Contexto próprio
+    color: #fff;
+    z-index: 10;
+    position: relative;
 }
 
-// Overlay for mobile menu
+// Overlay: darkens background when mobile menu is active
 .overlay {
     display: none;
     position: fixed;
@@ -133,24 +147,18 @@ $text-color-2: #000;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
-    z-index: 4; // Below mobile menu
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4;
 }
 
-// Show overlay when mobile menu is active
-.mobile-menu.flex + .overlay {
-    display: block;
-}
-
-// Responsive styles for mobile devices
+// Responsive styles: hide desktop links and display mobile elements on small screens
 @media screen and (max-width: 768px) {
     .nav-links-desktop {
-        display: none !important; // Hide desktop links
+        display: none !important;
     }
     .hamburger {
-        display: block; // Show hamburger button
+        display: block;
     }
-
     .mobile-menu.flex + .hamburger {
         display: none;
     }

@@ -1,162 +1,103 @@
 .card-container {
     display: grid;
-    /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 equal-width columns */
-    grid-template-rows: repeat(2, 55vh);
-    /* 3 equal-height rows */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in the grid */
+    grid-template-rows: repeat(2, 55vh); /* 2 rows, each 55% of viewport height */
     gap: 20px;
-    /* Space between cards */
     padding: 20px;
-    /* Optional padding around the grid */
-    /* Ensure the container spans full width */
     box-sizing: border-box;
-    /* Include padding and borders in width/height */
-    margin: 20px auto; 
-    /* Center container with outer margin */
-    max-width: 80%; 
-    /* Set maximum width for responsive scaling */
+    margin: 20px auto; /* Centers the grid container horizontally */
+    max-width: 80%;
 }
 
 .card {
     border: 1px solid black;
-    /* Black border */
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 5px 5px 5px rgb(207, 205, 205);
-    /* Shadow effect */
     padding: 20px;
-    /* Inner spacing */
     text-align: center;
-    /* Center text */
-    width: 100%;
-    /* Make the card take the full width of the grid cell */
-
+    width: 100%; /* Ensures the card fills its grid cell */
     box-sizing: border-box;
-    /* Ensure padding doesn’t affect size */
     background-color: white;
-    /* Ensure background color */
 }
 
 .img {
-    height: auto;
-    max-height: 50%;
+    max-height: 50%; /* Restricts image height to half of its container */
     border-radius: 2px;
-    /* Slightly rounded corners */
     margin-bottom: 10px;
-    /* Space below image */
 }
 
 .card-title,
 .price-tag {
     font-family: "Lucida Sans", sans-serif;
-    /* Consistent font style */
     font-weight: 400;
-    /* Regular font weight */
     line-height: 2.38rem;
-    /* Space between lines */
     margin: 10px auto;
-    /* Center the text horizontally */
     text-align: center;
-    /* Align text within its container */
 }
 
 .card-title {
     font-size: 1.5rem;
-    /* Larger font for title */
-    width: auto;
-    /* Remove fixed width to allow flexible sizing */
-    height: 4.2rem;
-
+    height: 4.2rem; /* Prevents overflow of long titles */
     overflow: hidden;
 }
 
 .price-tag {
     font-size: 1.25rem;
-    /* Smaller font for price */
 }
 
 .btn-buy {
     padding: 20px;
-    /* Inner spacing */
-    width: 10vw;
-    /* Fixed width */
+    width: 10vw; /* Fixed width for consistent button sizing */
     font-size: 1.25rem;
-    /* Font size */
-    font-family: "Lucida Sans", sans-serif;
-    /* Font style */
+    font-family: "Roboto", sans-serif;
     background-color: #ffffff;
-    /* Initial background color */
     color: #000;
-    /* Text color */
     text-align: center;
-    /* Center text inside */
     text-decoration: none;
-    /* Remove underline for links */
     border: 2px solid #ccc;
-    /* Add border */
     border-radius: 5px;
-    /* Rounded corners */
     cursor: pointer;
-    /* Pointer cursor on hover */
     box-shadow: 0 5px #bbb;
-    /* Shadow for 3D effect */
     transition: all 0.2s ease;
-    /* Smooth transition */
 }
 
 .btn-buy:hover {
     background-color: #f0f0f0;
-    /* Light gray background on hover */
     box-shadow: 0 7px #aaa;
-    /* Enhanced shadow for hover effect */
     transform: translateY(-2px);
-    /* Slight upward movement */
 }
 
 .btn-buy:active {
     background-color: #e0e0e0;
-    /* Darker gray when clicked */
     box-shadow: 0 3px #aaa;
-    /* Reduced shadow to simulate depth */
     transform: translateY(2px);
-    /* Downward movement on click */
 }
 
 .btn-buy a {
     color: #000;
-    /* Link text color inside button */
     text-decoration: none;
-    /* Remove underline */
 }
 
 .btn-buy a:hover {
     color: #555;
-    /* Change link color on hover */
 }
 
 @media screen and (max-width: 1024px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns */
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
     }
 
     .btn-buy {
-        padding: 20px;
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
         width: auto;
     }
 }
 
-/* Para smartphones e telas menores */
 @media screen and (max-width: 768px) {
     .card-container {
-        grid-template-columns: 1fr;
-        /* 1 column */
+        grid-template-columns: 1fr; /* Single column for small screens */
         gap: 15px;
-        /* Optional: Reduce gap for smaller screens */
         padding: 10px;
-        /* Optional: Reduce padding for smaller screens */
     }
 
     .card {
@@ -165,7 +106,7 @@
     }
 
     .img {
-        height: 150px;
+        height: 150px; /* Restrict image height for small screens */
     }
 
     .card-title {
@@ -175,6 +116,5 @@
     .btn-buy {
         padding: 10px;
         font-size: 0.9rem;
-        width: auto;
     }
 }
