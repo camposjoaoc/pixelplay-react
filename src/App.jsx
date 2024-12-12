@@ -21,7 +21,6 @@ function App() {
         <Route path="/about" element={<About />} /> {/* Renders About page */}
         <Route path="/cart" element={<ShoppingCart />} /> {/* Renders ShoppingCart page */}
       </Routes>
-
       {/* Footer component displayed on all pages */}
       <Footer></Footer>
     </BrowserRouter>
