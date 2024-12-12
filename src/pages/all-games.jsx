@@ -34,5 +34,4 @@ function AllGames(){
         />
       </div>
 }
-
 export default AllGames;
